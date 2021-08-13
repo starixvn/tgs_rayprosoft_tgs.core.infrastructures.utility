@@ -21,13 +21,13 @@ pipeline {
 		
 		stage('Pack') {
 			steps {
-				sh 'dotnet pack TGS.Core.Infrastructures.Utility/TGS.Core.Infrastructures.Utility.csproj -c $BuildConfiguration --no-build --no-restore'
+				sh 'dotnet pack Tgs.Core.Infrastructures.Utility/Tgs.Core.Infrastructures.Utility.csproj -c $BuildConfiguration --no-build --no-restore'
 			}
 		}
 		
 		stage('Push Nuget') {   
 			steps {
-				sh  'dotnet nuget push TGS.Core.Infrastructures.Utility/bin/$BuildConfiguration/*.nupkg --source "raypro" --skip-duplicate'
+				sh  'dotnet nuget push Tgs.Core.Infrastructures.Utility/bin/$BuildConfiguration/*.nupkg --source "raypro" --skip-duplicate'
 			}
 		}
 	}

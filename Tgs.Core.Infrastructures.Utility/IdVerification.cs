@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public static class IdVerification
     {
@@ -16,8 +16,8 @@ namespace TGS.Core.Infrastructures.Utility
                 "42", "43", "44", "45", "46", "50", "51", "52", "53", "54", "61", "62", "63", "64", "65", "71",
                 "81", "82", "91"
             };
-            var parityBit = new[] { '1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
-            var power = new[] { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 };
+            var parityBit = new[] {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
+            var power = new[] {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
 
             if (id.Length == 15)
             {

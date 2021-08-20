@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public static class InvitationCodeGenerator
     {
@@ -20,8 +20,8 @@ namespace TGS.Core.Infrastructures.Utility
         private static string GenerateString(int num)
         {
             var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            
-            var bytes =  Guid.NewGuid().ToByteArray();
+
+            var bytes = Guid.NewGuid().ToByteArray();
             var values = Enumerable.Range(0, num)
                 .Select(i => chars[(bytes[i] + bytes[num + i]) % 35]);
 

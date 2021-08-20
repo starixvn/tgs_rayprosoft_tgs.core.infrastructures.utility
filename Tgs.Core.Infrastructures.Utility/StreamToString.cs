@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public class StreamToString
     {

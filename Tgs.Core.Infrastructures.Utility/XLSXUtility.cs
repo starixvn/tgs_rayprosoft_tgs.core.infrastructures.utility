@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ClosedXML.Excel;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public static class XLSXUtility
     {

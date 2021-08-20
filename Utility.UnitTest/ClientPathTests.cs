@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using TGS.Core.Infrastructures.Utility;
+using Tgs.Core.Infrastructures.Utility;
 
 namespace Utility.UnitTest
 {

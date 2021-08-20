@@ -2,7 +2,7 @@
 using System.Text;
 using System.Threading;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public static class PlayerCodeGenerator
     {
@@ -32,11 +32,12 @@ namespace TGS.Core.Infrastructures.Utility
             while (num >= nbase)
             {
                 var r = num % nbase;
-                newNumber.Insert(0, chars[(int)r]);
+                newNumber.Insert(0, chars[(int) r]);
                 num = num / nbase;
             }
+
             // the last number to convert
-            newNumber.Insert(0, chars[(int)num]);
+            newNumber.Insert(0, chars[(int) num]);
 
             return newNumber.ToString().ToLower();
         }

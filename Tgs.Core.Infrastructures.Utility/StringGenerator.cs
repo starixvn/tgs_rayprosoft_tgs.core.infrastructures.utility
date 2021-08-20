@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Linq;
 
-namespace TGS.Core.Infrastructures.Utility
+namespace Tgs.Core.Infrastructures.Utility
 {
     public static class StringGenerator
     {
         private const string AlphanumericCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
         private static readonly Random Random = new Random();
 
-        public static string GenerateAlphanumericString(int length)
-        {
-            return GenerateString(AlphanumericCharacters, length);
-        }
+        public static string GenerateAlphanumericString(int length) => GenerateString(AlphanumericCharacters, length);
 
         private static string GenerateString(string chars, int length)
         {

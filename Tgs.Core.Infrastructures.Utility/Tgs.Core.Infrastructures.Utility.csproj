@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <Authors>Raypro</Authors>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <PackageProjectUrl>https://gitlab.com/rayprosoft/tgs.core.infrastructures.utility</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://gitlab.com/rayprosoft/tgs.core.infrastructures.utility.git</RepositoryUrl>

@@ -27,7 +27,7 @@ pipeline {
 		
 		stage('Push Nuget') {   
 			steps {
-				sh  'dotnet nuget push Tgs.Core.Infrastructures.Utility/bin/$BuildConfiguration/*.nupkg --source "raypro" --skip-duplicate'
+				sh  'dotnet nuget push Tgs.Core.Infrastructures.Utility/bin/$BuildConfiguration/*.nupkg -s raypro-baget -k admin --skip-duplicate'
 			}
 		}
 	}

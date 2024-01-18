@@ -21,5 +21,13 @@ namespace Tgs.Core.Infrastructures.Utility
 
         public static DateTimeOffset GetSpecifyDayOfMonth(DateTimeOffset date, int day)
             => new DateTimeOffset(date.Year, date.Month, day, 0, 0, 0, date.Offset);
+
+        public static DateTimeOffset GetMondayOfISO8601(this DateTimeOffset dateTimeOffset)
+            => dateTimeOffset.Subtract(
+                new TimeSpan(((int)dateTimeOffset.DayOfWeek == 0 ? 7 : (int)dateTimeOffset.DayOfWeek) - 1, 0, 0, 0));
+
+        public static DateTimeOffset GetSundayOfISO8601(this DateTimeOffset dateTimeOffset)
+            => dateTimeOffset.Subtract(
+                new TimeSpan(((int)dateTimeOffset.DayOfWeek == 0 ? 7 : (int)dateTimeOffset.DayOfWeek) - 7, 0, 0, 0));
     }
 }

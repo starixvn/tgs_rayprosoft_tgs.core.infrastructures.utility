@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <Authors>Raypro</Authors>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
+    <Nullable>enable</Nullable>
     <PackageProjectUrl>https://gitlab.com/rayprosoft/tgs.core.infrastructures.utility</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://gitlab.com/rayprosoft/tgs.core.infrastructures.utility.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
   </ItemGroup>
 
 </Project>

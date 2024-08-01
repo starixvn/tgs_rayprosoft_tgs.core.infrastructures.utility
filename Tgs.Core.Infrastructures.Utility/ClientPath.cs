@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 
 namespace Tgs.Core.Infrastructures.Utility
@@ -21,12 +22,34 @@ namespace Tgs.Core.Infrastructures.Utility
                     if (propertyInfo.PropertyType == typeof(DateTimeOffset)
                         || propertyInfo.PropertyType == typeof(DateTimeOffset?))
                     {
-                        value = ((DateTimeOffset?) value)?.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.sssZ");
+                        value = ((DateTimeOffset?)value)?.ToUniversalTime()
+                            .ToString("u");
                     }
 
-                    return last.Equals(propertyInfo)
-                        ? $"{current}{propertyInfo.Name}={value}"
-                        : $"{current}{propertyInfo.Name}={value}&";
+                    if (propertyInfo.PropertyType == typeof(DateTime)
+                        || propertyInfo.PropertyType == typeof(DateTime?))
+                    {
+                        value = ((DateTime?)value)?.ToUniversalTime()
+                            .ToString("u");
+                    }
+
+                    if (!propertyInfo.PropertyType.IsArray)
+                        return last.Equals(propertyInfo)
+                            ? $"{current}{propertyInfo.Name}={value}"
+                            : $"{current}{propertyInfo.Name}={value}&";
+
+                    if (value is null)
+                    {
+                        return $"{current}";
+                    }
+
+                    var query = string.Empty;
+                    var enumerable = (IEnumerable)value;
+
+                    query = enumerable.Cast<object>().Aggregate(query,
+                        (current1, item) => current1 + $"{propertyInfo.Name}={item}&");
+
+                    return $"{current}{query}";
                 });
         }
     }

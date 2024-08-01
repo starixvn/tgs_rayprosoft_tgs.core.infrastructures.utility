@@ -4,7 +4,7 @@
     <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <Authors>Raypro</Authors>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
     <Nullable>enable</Nullable>
     <PackageProjectUrl>https://gitlab.com/rayprosoft/tgs.core.infrastructures.utility</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
